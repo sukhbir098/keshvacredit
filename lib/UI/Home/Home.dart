@@ -72,34 +72,47 @@ class DashboardScreen extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              padding: EdgeInsets.all(3),
+              padding: EdgeInsets.all(4),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
+                  // First Container
                   Container(
-                    width: 130,
+                    width: MediaQuery.of(context).size.width * 0.3, // Adjust width based on screen size
                     height: 50,
                     child: Card(
+                      color: Theme.of(context).brightness == Brightness.dark
+                          ? Colors.blue[900]
+                          : Colors.blue,
                       child: Center(child: Text("Hello")),
                     ),
                   ),
+                  // Second Container
                   Container(
-                    width: 130,
+                    width: MediaQuery.of(context).size.width * 0.3, // Adjust width based on screen size
                     height: 50,
                     child: Card(
+                      color: Theme.of(context).brightness == Brightness.dark
+                          ? Colors.blue[900]
+                          : Colors.blue,
                       child: Center(child: Text("Hello")),
                     ),
                   ),
+                  // Third Container
                   Container(
-                    width: 130,
+                    width: MediaQuery.of(context).size.width * 0.3, // Adjust width based on screen size
                     height: 50,
                     child: Card(
+                      color: Theme.of(context).brightness == Brightness.dark
+                          ? Colors.blue[900]
+                          : Colors.blue,
                       child: Center(child: Text("Hello")),
                     ),
                   ),
                 ],
               ),
             ),
+
             SizedBox(height: 20),
             Container(
               padding: EdgeInsets.all(5),
@@ -112,41 +125,173 @@ class DashboardScreen extends StatelessWidget {
                     Container(
                       margin: EdgeInsets.symmetric(horizontal: 5),
                       child: Card(
+                        color: Theme.of(context).brightness == Brightness.dark
+                            ? Colors.red[300]
+                            : Colors.blue,
                         child: Container(
                           width: 300,
                           height: 80,
-                          child: Center(child: Text("Card 1")),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+
+                              Padding(
+                                padding: EdgeInsets.all(8), // बाएं साइड से padding देने के लिए
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    // Padding(padding: EdgeInsets.all(5)),
+                                    Text(
+                                      "Sachin ",
+                                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                                    ),
+                                    SizedBox(height: 5),
+                                    Text(
+                                      "hello sachin ",
+                                      style: TextStyle(fontSize: 14, color: Colors.black),
+                                    ),
+                                  ],
+                                ),
+                              ),
+
+                              Image.asset(
+                                'assets/otp.png',
+                                width: 50,
+                                height: 50,
+                              ),
+                            ],
+                          ),
                         ),
+
                       ),
                     ),
                     Container(
                       margin: EdgeInsets.symmetric(horizontal: 5),
                       child: Card(
+                        color: Theme.of(context).brightness == Brightness.dark
+                            ? Colors.red[300]
+                            : Colors.blue,
                         child: Container(
                           width: 300,
                           height: 80,
-                          child: Center(child: Text("Card 2")),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+
+                              Padding(
+                                padding: EdgeInsets.all(8), // बाएं साइड से padding देने के लिए
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    // Padding(padding: EdgeInsets.all(5)),
+                                    Text(
+                                      "Sachin ",
+                                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                                    ),
+                                    SizedBox(height: 5),
+                                    Text(
+                                      "hello sachin ",
+                                      style: TextStyle(fontSize: 14, color: Colors.black),
+                                    ),
+                                  ],
+                                ),
+                              ),
+
+                              Image.asset(
+                                'assets/otp.png',
+                                width: 50,
+                                height: 50,
+                              ),
+                            ],
+                          ),
                         ),
+
                       ),
                     ),
                     Container(
                       margin: EdgeInsets.symmetric(horizontal: 5),
                       child: Card(
+                        color: Theme.of(context).brightness == Brightness.dark
+                            ? Colors.red[300]
+                            : Colors.blue,
                         child: Container(
                           width: 300,
                           height: 80,
-                          child: Center(child: Text("Card 3")),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+
+                              Padding(
+                                padding: EdgeInsets.all(8), // बाएं साइड से padding देने के लिए
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    // Padding(padding: EdgeInsets.all(5)),
+                                    Text(
+                                      "Sachin ",
+                                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                                    ),
+                                    SizedBox(height: 5),
+                                    Text(
+                                      "hello sachin ",
+                                      style: TextStyle(fontSize: 14, color: Colors.black),
+                                    ),
+                                  ],
+                                ),
+                              ),
+
+                              Image.asset(
+                                'assets/otp.png',
+                                width: 50,
+                                height: 50,
+                              ),
+                            ],
+                          ),
                         ),
+
                       ),
                     ),
                     Container(
                       margin: EdgeInsets.symmetric(horizontal: 5),
                       child: Card(
+                        color: Theme.of(context).brightness == Brightness.dark
+                            ? Colors.red[300]
+                            : Colors.blue,
                         child: Container(
                           width: 300,
                           height: 80,
-                          child: Center(child: Text("Card 4")),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+
+                              Padding(
+                                padding: EdgeInsets.all(8), // बाएं साइड से padding देने के लिए
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    // Padding(padding: EdgeInsets.all(5)),
+                                    Text(
+                                      "Sachin ",
+                                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                                    ),
+                                    SizedBox(height: 5),
+                                    Text(
+                                      "hello sachin ",
+                                      style: TextStyle(fontSize: 14, color: Colors.black),
+                                    ),
+                                  ],
+                                ),
+                              ),
+
+                              Image.asset(
+                                'assets/otp.png',
+                                width: 50,
+                                height: 50,
+                              ),
+                            ],
+                          ),
                         ),
+
                       ),
                     ),
                   ],
@@ -168,9 +313,13 @@ class DashboardScreen extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  // First Card
                   Card(
+                    color: Theme.of(context).brightness == Brightness.dark
+                        ? Colors.blue[900]
+                        : Colors.blue,
                     child: Container(
-                      width: 80,
+                      width: MediaQuery.of(context).size.width * 0.18, // Adjust width based on screen size
                       height: 80,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -183,9 +332,13 @@ class DashboardScreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(width: 10),
+                  // Second Card
                   Card(
+                    color: Theme.of(context).brightness == Brightness.dark
+                        ? Colors.blue[900]
+                        : Colors.blue,
                     child: Container(
-                      width: 80,
+                      width: MediaQuery.of(context).size.width * 0.18, // Adjust width based on screen size
                       height: 80,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -198,9 +351,13 @@ class DashboardScreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(width: 10),
+                  // Third Card
                   Card(
+                    color: Theme.of(context).brightness == Brightness.dark
+                        ? Colors.blue[900]
+                        : Colors.blue,
                     child: Container(
-                      width: 80,
+                      width: MediaQuery.of(context).size.width * 0.18, // Adjust width based on screen size
                       height: 80,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -213,9 +370,13 @@ class DashboardScreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(width: 10),
+                  // Fourth Card
                   Card(
+                    color: Theme.of(context).brightness == Brightness.dark
+                        ? Colors.blue[900]
+                        : Colors.blue,
                     child: Container(
-                      width: 80,
+                      width: MediaQuery.of(context).size.width * 0.18, // Adjust width based on screen size
                       height: 80,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -236,9 +397,13 @@ class DashboardScreen extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  // First Card
                   Card(
+                    color: Theme.of(context).brightness == Brightness.dark
+                        ? Colors.blue[900]
+                        : Colors.blue,
                     child: Container(
-                      width: 80,
+                      width: MediaQuery.of(context).size.width * 0.18, // Adjust width based on screen size
                       height: 80,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -251,9 +416,13 @@ class DashboardScreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(width: 10),
+                  // Second Card
                   Card(
+                    color: Theme.of(context).brightness == Brightness.dark
+                        ? Colors.blue[900]
+                        : Colors.blue,
                     child: Container(
-                      width: 80,
+                      width: MediaQuery.of(context).size.width * 0.18, // Adjust width based on screen size
                       height: 80,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -266,9 +435,13 @@ class DashboardScreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(width: 10),
+                  // Third Card
                   Card(
+                    color: Theme.of(context).brightness == Brightness.dark
+                        ? Colors.blue[900]
+                        : Colors.blue,
                     child: Container(
-                      width: 80,
+                      width: MediaQuery.of(context).size.width * 0.18, // Adjust width based on screen size
                       height: 80,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -281,9 +454,13 @@ class DashboardScreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(width: 10),
+                  // Fourth Card
                   Card(
+                    color: Theme.of(context).brightness == Brightness.dark
+                        ? Colors.blue[900]
+                        : Colors.blue,
                     child: Container(
-                      width: 80,
+                      width: MediaQuery.of(context).size.width * 0.18, // Adjust width based on screen size
                       height: 80,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -298,7 +475,15 @@ class DashboardScreen extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 20),
+            Container(
+              padding: EdgeInsets.all(10),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                "Keshvacredit Lenders",
+                style: TextStyle(),
+              ),
+            ),
+            SizedBox(height: 1),
             Container(
               padding: EdgeInsets.all(5),
               width: double.infinity,
@@ -310,6 +495,9 @@ class DashboardScreen extends StatelessWidget {
                     Container(
                       margin: EdgeInsets.symmetric(horizontal: 5),
                       child: Card(
+                        color: Theme.of(context).brightness == Brightness.dark
+                            ? Colors.white
+                            : Colors.blue,
                         child: Container(
                           width: 300,
                           height: 200,
@@ -320,6 +508,9 @@ class DashboardScreen extends StatelessWidget {
                     Container(
                       margin: EdgeInsets.symmetric(horizontal: 5),
                       child: Card(
+                        color: Theme.of(context).brightness == Brightness.dark
+                            ? Colors.white
+                            : Colors.blue,
                         child: Container(
                           width: 300,
                           height: 200,
@@ -330,16 +521,22 @@ class DashboardScreen extends StatelessWidget {
                     Container(
                       margin: EdgeInsets.symmetric(horizontal: 5),
                       child: Card(
+                        color: Theme.of(context).brightness == Brightness.dark
+                            ? Colors.white
+                            : Colors.blue,
                         child: Container(
                           width: 300,
                           height: 200,
-                          child: Center(child: Text("Card 3")),
+                         child: Center(child: Text("Card 3"),),
                         ),
                       ),
                     ),
                     Container(
                       margin: EdgeInsets.symmetric(horizontal: 5),
                       child: Card(
+                        color: Theme.of(context).brightness == Brightness.dark
+                            ? Colors.white
+                            : Colors.blue,
                         child: Container(
                           width: 300,
                           height: 200,
@@ -347,42 +544,62 @@ class DashboardScreen extends StatelessWidget {
                         ),
                       ),
                     ),
+
+
+
                   ],
+
                 ),
+
+
               ),
             ),
-            SizedBox(height: 10),
             Container(
-              alignment: Alignment.center,
-              padding: EdgeInsets.all(10),
+              color: Colors.blue,
+              padding: EdgeInsets.all(20),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center, // Set to center
                 children: [
-                  Text(
-                    "KESHVACREDIT",
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                    textAlign: TextAlign.center,  // Align text to the center
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      TextButton(
+                        onPressed: () {
+                          // Navigate to Home
+                        },
+                        child: Text('Home', style: TextStyle(color: Colors.white)),
+                      ),
+                      SizedBox(width: 20),
+                      TextButton(
+                        onPressed: () {
+                          // Navigate to About
+                        },
+                        child: Text('About', style: TextStyle(color: Colors.white)),
+                      ),
+                      SizedBox(width: 20),
+                      TextButton(
+                        onPressed: () {
+                          // Navigate to About
+                        },
+                        child: Text('About', style: TextStyle(color: Colors.white)),
+                      ),
+                      SizedBox(width: 20),
+                      TextButton(
+                        onPressed: () {
+                          // Navigate to About
+                        },
+                        child: Text('About', style: TextStyle(color: Colors.white)),
+                      ),
+                    ],
                   ),
-                  SizedBox(height: 10),
-                  Text(
-                    "Secure ,Simple, Smart",
-                    style: TextStyle(fontSize: 16),
-                    textAlign: TextAlign.center,  // Align text to the center
-                  ),
-                  SizedBox(height: 10),
-                  Text(
-                    "Your made in india Platform",
-                    style: TextStyle(fontSize: 16),
-                    textAlign: TextAlign.center,  // Align text to the center
-                  ),
-                  Divider(),
                 ],
               ),
             ),
-            SizedBox(height: 20)
+
+
           ],
         ),
       ),
+
     );
   }
 }
