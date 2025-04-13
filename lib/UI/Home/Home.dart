@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'Offers.dart';
+
 class Dashboard extends StatefulWidget {
   const Dashboard({super.key});
 
@@ -32,6 +34,8 @@ class DashboardScreen extends StatelessWidget {
   final VoidCallback toggleTheme;
   const DashboardScreen({super.key, required this.toggleTheme});
 
+  get buttonColor => null;
+
   @override
   Widget build(BuildContext context) {
     bool isDarkMode = Theme.of(context).brightness == Brightness.dark;
@@ -39,6 +43,7 @@ class DashboardScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: isDarkMode ? Colors.black : Colors.white,
+
         elevation: 0,
         title: Text("Dashboard", style: TextStyle(color: isDarkMode ? Colors.white : Colors.black)),
         actions: [
@@ -82,31 +87,65 @@ class DashboardScreen extends StatelessWidget {
                     height: 50,
                     child: Card(
                       color: Theme.of(context).brightness == Brightness.dark
-                          ? Colors.blue[900]
-                          : Colors.blue,
-                      child: Center(child: Text("Hello")),
+                          ? Colors.blue[50]
+                          : Colors.blue[50],
+                      child: Center(
+                        child: Text(
+                          "D/A 200C+",
+                          style: TextStyle(
+                            color: Theme.of(context).brightness == Brightness.dark
+                                ? Colors.black
+                                : Colors.black,
+                            fontSize: 16,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                      ),
                     ),
+
                   ),
                   // Second Container
                   Container(
-                    width: MediaQuery.of(context).size.width * 0.3, // Adjust width based on screen size
+                    width: MediaQuery.of(context).size.width * 0.3,
                     height: 50,
                     child: Card(
                       color: Theme.of(context).brightness == Brightness.dark
-                          ? Colors.blue[900]
-                          : Colors.blue,
-                      child: Center(child: Text("Hello")),
+                          ? Colors.blue[50]
+                          : Colors.blue[50],
+                      child: Center(
+                        child: Text(
+                          "Banks 4+",
+                          style: TextStyle(
+                            color: Theme.of(context).brightness == Brightness.dark
+                                ? Colors.black
+                                : Colors.black,
+                            fontSize: 16,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                      ),
                     ),
                   ),
                   // Third Container
                   Container(
-                    width: MediaQuery.of(context).size.width * 0.3, // Adjust width based on screen size
+                    width: MediaQuery.of(context).size.width * 0.3,
                     height: 50,
                     child: Card(
                       color: Theme.of(context).brightness == Brightness.dark
-                          ? Colors.blue[900]
-                          : Colors.blue,
-                      child: Center(child: Text("Hello")),
+                          ? Colors.blue[50]
+                          : Colors.blue[50],
+                      child: Center(
+                        child: Text(
+                          "Lenders 5+",
+                          style: TextStyle(
+                            color: Theme.of(context).brightness == Brightness.dark
+                                ? Colors.black
+                                : Colors.black,
+                            fontSize: 16,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                      ),
                     ),
                   ),
                 ],
@@ -125,173 +164,93 @@ class DashboardScreen extends StatelessWidget {
                     Container(
                       margin: EdgeInsets.symmetric(horizontal: 5),
                       child: Card(
-                        color: Theme.of(context).brightness == Brightness.dark
-                            ? Colors.red[300]
-                            : Colors.blue,
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                        clipBehavior: Clip.antiAlias,
                         child: Container(
                           width: 300,
-                          height: 80,
+                          height: 100,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage('assets/background.jpeg'),
+                              fit: BoxFit.cover,
+                            ),
+                          ),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-
                               Padding(
-                                padding: EdgeInsets.all(8), // बाएं साइड से padding देने के लिए
+                                padding: EdgeInsets.all(8),
                                 child: Column(
+                                  mainAxisSize: MainAxisSize.min,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    // Padding(padding: EdgeInsets.all(5)),
                                     Text(
-                                      "Sachin ",
-                                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                                    ),
-                                    SizedBox(height: 5),
-                                    Text(
-                                      "hello sachin ",
-                                      style: TextStyle(fontSize: 14, color: Colors.black),
+                                      "Get your instant loan now!",
+                                      style: TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white,
+                                      ),
                                     ),
                                   ],
                                 ),
                               ),
-
-                              Image.asset(
-                                'assets/otp.png',
-                                width: 50,
-                                height: 50,
-                              ),
+                              // You can enable the image if needed
+                              // Image.asset(
+                              //   'assets/otp.png',
+                              //   width: 50,
+                              //   height: 50,
+                              // ),
                             ],
                           ),
                         ),
-
                       ),
                     ),
+
+
                     Container(
                       margin: EdgeInsets.symmetric(horizontal: 5),
                       child: Card(
-                        color: Theme.of(context).brightness == Brightness.dark
-                            ? Colors.red[300]
-                            : Colors.blue,
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                        clipBehavior: Clip.antiAlias,
                         child: Container(
                           width: 300,
-                          height: 80,
+                          height: 100,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage('assets/background.jpeg'),
+                              fit: BoxFit.cover,
+                            ),
+                          ),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-
                               Padding(
-                                padding: EdgeInsets.all(8), // बाएं साइड से padding देने के लिए
+                                padding: EdgeInsets.all(8),
                                 child: Column(
+                                  mainAxisSize: MainAxisSize.min,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    // Padding(padding: EdgeInsets.all(5)),
                                     Text(
-                                      "Sachin ",
-                                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                                    ),
-                                    SizedBox(height: 5),
-                                    Text(
-                                      "hello sachin ",
-                                      style: TextStyle(fontSize: 14, color: Colors.black),
+                                      "Get your instant loan now!",
+                                      style: TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white,
+                                      ),
                                     ),
                                   ],
                                 ),
                               ),
-
-                              Image.asset(
-                                'assets/otp.png',
-                                width: 50,
-                                height: 50,
-                              ),
+                              // You can enable the image if needed
+                              // Image.asset(
+                              //   'assets/otp.png',
+                              //   width: 50,
+                              //   height: 50,
+                              // ),
                             ],
                           ),
                         ),
-
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.symmetric(horizontal: 5),
-                      child: Card(
-                        color: Theme.of(context).brightness == Brightness.dark
-                            ? Colors.red[300]
-                            : Colors.blue,
-                        child: Container(
-                          width: 300,
-                          height: 80,
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-
-                              Padding(
-                                padding: EdgeInsets.all(8), // बाएं साइड से padding देने के लिए
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    // Padding(padding: EdgeInsets.all(5)),
-                                    Text(
-                                      "Sachin ",
-                                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                                    ),
-                                    SizedBox(height: 5),
-                                    Text(
-                                      "hello sachin ",
-                                      style: TextStyle(fontSize: 14, color: Colors.black),
-                                    ),
-                                  ],
-                                ),
-                              ),
-
-                              Image.asset(
-                                'assets/otp.png',
-                                width: 50,
-                                height: 50,
-                              ),
-                            ],
-                          ),
-                        ),
-
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.symmetric(horizontal: 5),
-                      child: Card(
-                        color: Theme.of(context).brightness == Brightness.dark
-                            ? Colors.red[300]
-                            : Colors.blue,
-                        child: Container(
-                          width: 300,
-                          height: 80,
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-
-                              Padding(
-                                padding: EdgeInsets.all(8), // बाएं साइड से padding देने के लिए
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    // Padding(padding: EdgeInsets.all(5)),
-                                    Text(
-                                      "Sachin ",
-                                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                                    ),
-                                    SizedBox(height: 5),
-                                    Text(
-                                      "hello sachin ",
-                                      style: TextStyle(fontSize: 14, color: Colors.black),
-                                    ),
-                                  ],
-                                ),
-                              ),
-
-                              Image.asset(
-                                'assets/otp.png',
-                                width: 50,
-                                height: 50,
-                              ),
-                            ],
-                          ),
-                        ),
-
                       ),
                     ),
                   ],
@@ -300,6 +259,7 @@ class DashboardScreen extends StatelessWidget {
             ),
             SizedBox(height: 20),
             Container(
+              margin: EdgeInsets.only(bottom: 10),
               padding: EdgeInsets.all(10),
               alignment: Alignment.centerLeft,
               child: Text(
@@ -309,169 +269,398 @@ class DashboardScreen extends StatelessWidget {
             ),
             SizedBox(height: 10),
             Container(
-              padding: EdgeInsets.all(10),
+              padding: EdgeInsets.only(left: 10, right: 20),
+
+
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween, // Even spacing between all items
+                mainAxisSize: MainAxisSize.max,
                 children: [
                   // First Card
-                  Card(
-                    color: Theme.of(context).brightness == Brightness.dark
-                        ? Colors.blue[900]
-                        : Colors.blue,
-                    child: Container(
-                      width: MediaQuery.of(context).size.width * 0.18, // Adjust width based on screen size
-                      height: 80,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(Icons.home, size: 30),
-                          SizedBox(height: 10),
-                          Text("Home", style: TextStyle(fontSize: 16)),
-                        ],
+                  Column(
+                    children: [
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => OffersPage()),
+                          );
+                        },
+                        splashColor: Colors.transparent,  // No ripple effect
+                        highlightColor: Colors.transparent, // No highlight
+                        hoverColor: Colors.transparent,    // No hover color on web/desktop
+                        child: Card(
+                          color: Theme.of(context).brightness == Brightness.dark
+                              ? Colors.blue[50]
+                              : Colors.blue[50],
+                          child: Container(
+                            width: MediaQuery.of(context).size.width * 0.18,
+                            height: 80,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  Icons.card_giftcard,
+                                  size: 30,
+                                  color: Theme.of(context).brightness == Brightness.dark
+                                      ? Colors.brown // Dark mode icon color
+                                      : Colors.blue[900], // Light mode icon color
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
                       ),
-                    ),
+
+                      SizedBox(height: 10), // Space between Card and Text
+
+                      // Aligning text below the Card
+                      Text(
+                        textAlign: TextAlign.center,
+                        "Offers",
+                        style: TextStyle(
+                          color: Theme.of(context).brightness == Brightness.dark
+                              ? Colors.white
+                              : Colors.black, // Text color for both modes
+                          fontSize: 16,    fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ],
                   ),
+
                   SizedBox(width: 10),
                   // Second Card
-                  Card(
-                    color: Theme.of(context).brightness == Brightness.dark
-                        ? Colors.blue[900]
-                        : Colors.blue,
-                    child: Container(
-                      width: MediaQuery.of(context).size.width * 0.18, // Adjust width based on screen size
-                      height: 80,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(Icons.shopping_cart, size: 30),
-                          SizedBox(height: 10),
-                          Text("Cart", style: TextStyle(fontSize: 16)),
-                        ],
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Card(
+                        margin: EdgeInsets.only(top: 20),
+                        color: Theme.of(context).brightness == Brightness.dark
+                            ? Colors.blue[50]
+                            : Colors.blue[50],
+                        child: Container(
+                          width: MediaQuery.of(context).size.width * 0.18, // Adjust width based on screen size
+                          height: 80,
+
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(
+                                Icons.credit_card,
+                                size: 30,
+                                color: Theme.of(context).brightness == Brightness.dark
+                                    ? Colors.brown // Dark mode icon color
+                                    : Colors.blue[900], // Light mode icon color
+                              ),
+                            ],
+                          ),
+                        ),
                       ),
-                    ),
+
+                      SizedBox(height: 5), // Space between Card and Text
+
+                      // Text below the Card
+                      Text(
+                        "Personal \n Loan",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Theme.of(context).brightness == Brightness.dark
+                              ? Colors.white
+                              : Colors.black, // Text color for both modes
+                          fontSize: 16,    fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ],
                   ),
+
                   SizedBox(width: 10),
                   // Third Card
-                  Card(
-                    color: Theme.of(context).brightness == Brightness.dark
-                        ? Colors.blue[900]
-                        : Colors.blue,
-                    child: Container(
-                      width: MediaQuery.of(context).size.width * 0.18, // Adjust width based on screen size
-                      height: 80,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(Icons.notifications, size: 30),
-                          SizedBox(height: 10),
-                          Text("Notifi", style: TextStyle(fontSize: 16)),
-                        ],
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Card(
+                        margin: EdgeInsets.only(top: 20),
+                        color: Theme.of(context).brightness == Brightness.dark
+                            ? Colors.blue[50]
+                            : Colors.blue[50],
+                        child: Container(
+                          width: MediaQuery.of(context).size.width * 0.18, // Adjust width based on screen size
+                          height: 80,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(
+                                Icons.business,
+                                size: 30,
+                                color: Theme.of(context).brightness == Brightness.dark
+                                    ? Colors.brown // Dark mode icon color
+                                    : Colors.blue[900], // Light mode icon color
+                              ),
+                            ],
+                          ),
+                        ),
                       ),
-                    ),
+
+                      SizedBox(height: 5), // Space between Card and Text
+
+                      // Text below the Card
+                      Text(
+                        "Business\n Loan",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Theme.of(context).brightness == Brightness.dark
+                              ? Colors.white
+                              : Colors.black, // Text color for both modes
+                          fontSize: 16,    fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ],
                   ),
+
+
                   SizedBox(width: 10),
                   // Fourth Card
-                  Card(
-                    color: Theme.of(context).brightness == Brightness.dark
-                        ? Colors.blue[900]
-                        : Colors.blue,
-                    child: Container(
-                      width: MediaQuery.of(context).size.width * 0.18, // Adjust width based on screen size
-                      height: 80,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(Icons.account_circle, size: 30),
-                          SizedBox(height: 10),
-                          Text("Profile", style: TextStyle(fontSize: 16)),
-                        ],
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Card(
+                        margin: EdgeInsets.only(top: 20),
+                        color: Theme.of(context).brightness == Brightness.dark
+                            ? Colors.blue[50]
+                            : Colors.blue[50],
+                        child: Container(
+                          width: MediaQuery.of(context).size.width * 0.18, // Adjust width based on screen size
+                          height: 80,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(
+                                Icons.shopping_cart,
+                                size: 30,
+                                color: Theme.of(context).brightness == Brightness.dark
+                                    ? Colors.brown // Dark mode icon color
+                                    : Colors.blue[900], // Light mode icon color
+                              ),
+                            ],
+                          ),
+                        ),
                       ),
-                    ),
-                  ),
+
+                      SizedBox(height: 5), // Space between Card and Text
+
+                      // Text below the Card
+                      Text(
+                        "Credit\n Card",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Theme.of(context).brightness == Brightness.dark
+                              ? Colors.white
+                              : Colors.black, // Text color for both modes
+                          fontSize: 16,    fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ],
+                  )
+
                 ],
               ),
             ),
             SizedBox(height: 10),
             Container(
-              padding: EdgeInsets.all(10),
+              margin: EdgeInsets.only(top: 10),
+              padding: EdgeInsets.only(left: 10, right: 20),
+
+
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween, // Even spacing between all items
+                mainAxisSize: MainAxisSize.max,
                 children: [
                   // First Card
-                  Card(
-                    color: Theme.of(context).brightness == Brightness.dark
-                        ? Colors.blue[900]
-                        : Colors.blue,
-                    child: Container(
-                      width: MediaQuery.of(context).size.width * 0.18, // Adjust width based on screen size
-                      height: 80,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(Icons.home, size: 30),
-                          SizedBox(height: 10),
-                          Text("Home", style: TextStyle(fontSize: 16)),
-                        ],
+                  Column(
+                    children: [
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => OffersPage()),
+                          );
+                        },
+                        splashColor: Colors.transparent,  // No ripple effect
+                        highlightColor: Colors.transparent, // No highlight
+                        hoverColor: Colors.transparent,    // No hover color on web/desktop
+                        child: Card(
+                          color: Theme.of(context).brightness == Brightness.dark
+                              ? Colors.blue[50]
+                              : Colors.blue[50],
+                          child: Container(
+                            width: MediaQuery.of(context).size.width * 0.18,
+                            height: 80,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  Icons.card_giftcard,
+                                  size: 30,
+                                  color: Theme.of(context).brightness == Brightness.dark
+                                      ? Colors.brown // Dark mode icon color
+                                      : Colors.blue[900], // Light mode icon color
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
                       ),
-                    ),
+
+                      SizedBox(height: 10), // Space between Card and Text
+
+                      // Aligning text below the Card
+                      Text(
+                        textAlign: TextAlign.center,
+                        "Loan\n Process",
+                        style: TextStyle(
+                          color: Theme.of(context).brightness == Brightness.dark
+                              ? Colors.white
+                              : Colors.black, // Text color for both modes
+                          fontSize: 16,    fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ],
                   ),
+
                   SizedBox(width: 10),
                   // Second Card
-                  Card(
-                    color: Theme.of(context).brightness == Brightness.dark
-                        ? Colors.blue[900]
-                        : Colors.blue,
-                    child: Container(
-                      width: MediaQuery.of(context).size.width * 0.18, // Adjust width based on screen size
-                      height: 80,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(Icons.shopping_cart, size: 30),
-                          SizedBox(height: 10),
-                          Text("Cart", style: TextStyle(fontSize: 16)),
-                        ],
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Card(
+
+                        color: Theme.of(context).brightness == Brightness.dark
+                            ? Colors.blue[50]
+                            : Colors.blue[50],
+                        child: Container(
+                          width: MediaQuery.of(context).size.width * 0.18, // Adjust width based on screen size
+                          height: 80,
+
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(
+                                Icons.credit_card,
+                                size: 30,
+                                color: Theme.of(context).brightness == Brightness.dark
+                                    ? Colors.brown // Dark mode icon color
+                                    : Colors.blue[900], // Light mode icon color
+                              ),
+                            ],
+                          ),
+                        ),
                       ),
-                    ),
+
+                      SizedBox(height: 5), // Space between Card and Text
+
+                      // Text below the Card
+                      Text(
+                        "Eligible\n Lenders",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Theme.of(context).brightness == Brightness.dark
+                              ? Colors.white
+                              : Colors.black, // Text color for both modes
+                          fontSize: 16,    fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ],
                   ),
+
                   SizedBox(width: 10),
                   // Third Card
-                  Card(
-                    color: Theme.of(context).brightness == Brightness.dark
-                        ? Colors.blue[900]
-                        : Colors.blue,
-                    child: Container(
-                      width: MediaQuery.of(context).size.width * 0.18, // Adjust width based on screen size
-                      height: 80,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(Icons.notifications, size: 30),
-                          SizedBox(height: 10),
-                          Text("Notifi", style: TextStyle(fontSize: 16)),
-                        ],
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Card(
+                        margin: EdgeInsets.only(bottom: 18),
+                        color: Theme.of(context).brightness == Brightness.dark
+                            ? Colors.blue[50]
+                            : Colors.blue[50],
+                        child: Container(
+                          width: MediaQuery.of(context).size.width * 0.18, // Adjust width based on screen size
+                          height: 80,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(
+                                Icons.business,
+                                size: 30,
+                                color: Theme.of(context).brightness == Brightness.dark
+                                    ? Colors.brown // Dark mode icon color
+                                    : Colors.blue[900], // Light mode icon color
+                              ),
+                            ],
+                          ),
+                        ),
                       ),
-                    ),
+
+                      SizedBox(height: 5), // Space between Card and Text
+
+                      // Text below the Card
+                      Text(
+                        "Calculator",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Theme.of(context).brightness == Brightness.dark
+                              ? Colors.white
+                              : Colors.black, // Text color for both modes
+                          fontSize: 16,    fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ],
                   ),
+
+
                   SizedBox(width: 10),
                   // Fourth Card
-                  Card(
-                    color: Theme.of(context).brightness == Brightness.dark
-                        ? Colors.blue[900]
-                        : Colors.blue,
-                    child: Container(
-                      width: MediaQuery.of(context).size.width * 0.18, // Adjust width based on screen size
-                      height: 80,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(Icons.account_circle, size: 30),
-                          SizedBox(height: 10),
-                          Text("Profile", style: TextStyle(fontSize: 16)),
-                        ],
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Card(
+                        margin: EdgeInsets.only(bottom: 15),
+                        color: Theme.of(context).brightness == Brightness.dark
+                            ? Colors.blue[50]
+                            : Colors.blue[50],
+                        child: Container(
+                          width: MediaQuery.of(context).size.width * 0.18, // Adjust width based on screen size
+                          height: 80,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(
+                                Icons.shopping_cart,
+                                size: 30,
+                                color: Theme.of(context).brightness == Brightness.dark
+                                    ? Colors.brown // Dark mode icon color
+                                    : Colors.blue[900], // Light mode icon color
+                              ),
+                            ],
+                          ),
+                        ),
                       ),
-                    ),
-                  ),
+
+                      SizedBox(height: 5), // Space between Card and Text
+
+                      // Text below the Card
+                      Text(
+                        "Gold Loan",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Theme.of(context).brightness == Brightness.dark
+                              ? Colors.white
+                              : Colors.black, // Text color for both modes
+                          fontSize: 16,    fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ],
+                  )
+
                 ],
               ),
             ),
@@ -496,12 +685,43 @@ class DashboardScreen extends StatelessWidget {
                       margin: EdgeInsets.symmetric(horizontal: 5),
                       child: Card(
                         color: Theme.of(context).brightness == Brightness.dark
-                            ? Colors.white
-                            : Colors.blue,
+                            ? Colors.blue[50]
+                            : Colors.blue[50],
                         child: Container(
                           width: 300,
                           height: 200,
-                          child: Center(child: Text("Card 1")),
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage('assets/Hm_page-0001.jpg'),
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                          child: Center(child: Text("",style: TextStyle(color: Theme.of(context).brightness == Brightness.dark
+                              ? Colors.black
+                              : Colors.black,  fontSize: 16),  )),
+                        ),
+                      ),
+                    ),
+
+
+                    Container(
+                      margin: EdgeInsets.symmetric(horizontal: 5),
+                      child: Card(
+                        color: Theme.of(context).brightness == Brightness.dark
+                            ? Colors.blue[50]
+                            : Colors.blue[50],
+                        child: Container(
+                          width: 300,
+                          height: 200,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage('assets/Cl_page-0001.jpg'),
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                          child: Center(child: Text("", style: TextStyle(color: Theme.of(context).brightness == Brightness.dark
+                              ? Colors.black
+                              : Colors.black,  fontSize: 16),)),
                         ),
                       ),
                     ),
@@ -509,12 +729,20 @@ class DashboardScreen extends StatelessWidget {
                       margin: EdgeInsets.symmetric(horizontal: 5),
                       child: Card(
                         color: Theme.of(context).brightness == Brightness.dark
-                            ? Colors.white
-                            : Colors.blue,
+                            ? Colors.blue[50]
+                            : Colors.blue[50],
                         child: Container(
                           width: 300,
                           height: 200,
-                          child: Center(child: Text("Card 2")),
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage('assets/BL_page-0001.jpg'),
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                         child: Center(child: Text("", style: TextStyle(color: Theme.of(context).brightness == Brightness.dark
+                             ? Colors.black
+                             : Colors.black,  fontSize: 16),),),
                         ),
                       ),
                     ),
@@ -522,25 +750,20 @@ class DashboardScreen extends StatelessWidget {
                       margin: EdgeInsets.symmetric(horizontal: 5),
                       child: Card(
                         color: Theme.of(context).brightness == Brightness.dark
-                            ? Colors.white
-                            : Colors.blue,
+                            ? Colors.blue[50]
+                            : Colors.blue[50],
                         child: Container(
                           width: 300,
                           height: 200,
-                         child: Center(child: Text("Card 3"),),
-                        ),
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.symmetric(horizontal: 5),
-                      child: Card(
-                        color: Theme.of(context).brightness == Brightness.dark
-                            ? Colors.white
-                            : Colors.blue,
-                        child: Container(
-                          width: 300,
-                          height: 200,
-                          child: Center(child: Text("Card 4")),
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage('assets/personal_page-0001.jpg'),
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                          child: Center(child: Text("",style: TextStyle(color: Theme.of(context).brightness == Brightness.dark
+                              ? Colors.black
+                              : Colors.black,  fontSize: 16),  )),
                         ),
                       ),
                     ),
@@ -554,46 +777,7 @@ class DashboardScreen extends StatelessWidget {
 
               ),
             ),
-            Container(
-              color: Colors.blue,
-              padding: EdgeInsets.all(20),
-              child: Column(
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      TextButton(
-                        onPressed: () {
-                          // Navigate to Home
-                        },
-                        child: Text('Home', style: TextStyle(color: Colors.white)),
-                      ),
-                      SizedBox(width: 20),
-                      TextButton(
-                        onPressed: () {
-                          // Navigate to About
-                        },
-                        child: Text('About', style: TextStyle(color: Colors.white)),
-                      ),
-                      SizedBox(width: 20),
-                      TextButton(
-                        onPressed: () {
-                          // Navigate to About
-                        },
-                        child: Text('About', style: TextStyle(color: Colors.white)),
-                      ),
-                      SizedBox(width: 20),
-                      TextButton(
-                        onPressed: () {
-                          // Navigate to About
-                        },
-                        child: Text('About', style: TextStyle(color: Colors.white)),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
+
 
 
           ],
